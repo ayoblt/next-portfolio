@@ -8,6 +8,7 @@ import { ThemeProvider } from "@/providers/theme-provider";
 import MobileMenu from "@/components/navbar/mobile-menu";
 import MobileMenuToggler from "@/components/navbar/mobile-menu-toggler";
 import { Overlay } from "@/components/navbar/overlay";
+import Footer from "@/components/footer";
 
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] });
 
@@ -26,7 +27,7 @@ export default function RootLayout({
       <html lang="en" suppressHydrationWarning>
         <body
           className={cn(
-            "relative antialiased transition",
+            "relative antialiased transition duration-100",
             jetbrainsMono.className
           )}
         >
@@ -36,6 +37,7 @@ export default function RootLayout({
             <MobileMenu />
             <MobileMenuToggler />
             {children}
+            <Footer />
           </ThemeProvider>
         </body>
       </html>

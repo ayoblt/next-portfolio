@@ -1,12 +1,6 @@
 import { cn } from "@/lib/utils";
 
-const Sun = ({
-  className,
-  toggleTheme,
-}: {
-  className?: string;
-  toggleTheme?: () => void;
-}) => {
+const Sun = ({ className }: { className?: string }) => {
   return (
     <svg
       width="16"
