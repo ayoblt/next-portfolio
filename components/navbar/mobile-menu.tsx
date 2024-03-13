@@ -16,19 +16,12 @@ const MobileMenu = () => {
           display: "flex",
           transition: {
             type: "spring",
-            bounce: 0,
-            duration: 0.8,
-            // delayChildren: 0.4,
-            // staggerChildren: 0.06,
+            duration: 0.7,
+            ease: "easeInOut",
           },
         },
         closed: {
           scale: 0,
-          transition: {
-            type: "spring",
-            bounce: 0,
-            duration: 0.3,
-          },
         },
       }}
       initial={{ x: "-50%" }}
