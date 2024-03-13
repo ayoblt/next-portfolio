@@ -2,48 +2,24 @@
 
 import { NavRoutes } from "@/data/navbar";
 import { useToggle } from "@/hooks/use-toggle";
-import { m } from "framer-motion";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 
 const MobileMenu = () => {
   const { isOpen, handleToggle } = useToggle();
   return (
-    <m.ul
-      animate={isOpen ? "open" : "closed"}
-      variants={{
-        open: {
-          scale: 1,
-          display: "flex",
-          transition: {
-            type: "spring",
-            duration: 0.7,
-            ease: "easeInOut",
-          },
-        },
-        closed: {
-          scale: 0,
-        },
-      }}
-      initial={{ x: "-50%" }}
+    <ul
       className={`${
-        isOpen ? "flex" : "hidden"
-      } fixed md:hidden px-4 py-7 flex-col justify-center items-center gap-3 bg-gray-700/70 bottom-24 w-5/6 left-1/2 rounded-2xl origin-bottom z-50`}
+        isOpen ? "scale-100" : "scale-0"
+      } fixed flex md:hidden px-4 py-7 flex-col justify-center items-center gap-3 bg-gray-700/70 bottom-24 w-5/6 left-1/2 rounded-2xl origin-bottom z-50 -translate-x-1/2 transition-all`}
     >
       {NavRoutes.map((route) => (
-        <m.li
-          variants={{
-            open: {
-              opacity: 1,
-              y: 0,
-            },
-            closed: {
-              opacity: 0,
-              y: "20px",
-            },
-          }}
-          initial={{ opacity: 0, y: "20px" }}
+        <li
           key={route.label}
-          className="text-small capitalize w-full text-center font-medium tracking-wider py-1 translate-y-5 opacity-0"
+          className={cn(
+            "text-small capitalize w-full text-center font-medium tracking-wider py-1 ",
+            isOpen ? "opacity-100 translate-y-0" : "translate-y-5 opacity-0"
+          )}
         >
           <Link
             href={route.path}
@@ -52,9 +28,9 @@ const MobileMenu = () => {
           >
             {route.label}
           </Link>
-        </m.li>
+        </li>
       ))}
-    </m.ul>
+    </ul>
   );
 };
 

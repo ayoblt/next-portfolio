@@ -2,7 +2,6 @@
 
 import { useToggle } from "@/hooks/use-toggle";
 import { cn } from "@/lib/utils";
-import { m } from "framer-motion";
 
 const MobileMenuToggler = () => {
   const { isOpen, handleToggle } = useToggle();
@@ -14,10 +13,10 @@ const MobileMenuToggler = () => {
         ${isOpen ? "gap-0 p-4" : "gap-2 py-[10px] px-5"}
       `}
     >
-      <div className="flex flex-col items-center justify-center gap-[3px]">
+      <div className="flex flex-col items-center justify-center gap-[3px] transition-all">
         <span
           className={cn(
-            "w-3 h-[3px] rounded-full bg-[#011627] dark:bg-primary transition",
+            "w-3 h-[3px] rounded-full bg-[#011627] dark:bg-primary transition-all",
             isOpen
               ? "rotate-45 translate-y-[6px] w-5"
               : "rotate-0 translate-y-0"
@@ -25,13 +24,13 @@ const MobileMenuToggler = () => {
         ></span>
         <span
           className={cn(
-            "w-5 h-[3px] rounded-full bg-[#011627] dark:bg-primary origin-left transition",
+            "w-5 h-[3px] rounded-full bg-[#011627] dark:bg-primary origin-left transition-all",
             isOpen ? "scale-x-0 opacity-0" : ""
           )}
         ></span>
         <span
           className={cn(
-            "w-3 h-[3px] rounded-full bg-[#011627] dark:bg-primary transition",
+            "w-3 h-[3px] rounded-full bg-[#011627] dark:bg-primary transition-all",
             isOpen
               ? "-rotate-45 -translate-y-[6px] w-5"
               : "rotate-0 translate-y-0"
@@ -40,8 +39,8 @@ const MobileMenuToggler = () => {
       </div>
       <p
         className={cn(
-          "text-sm text-[#011627] dark:text-primary font-medium whitespace-nowrap origin-right w-fit transition",
-          isOpen ? "scale-x-0 w-0" : ""
+          "text-sm text-[#011627] dark:text-primary font-medium whitespace-nowrap origin-right w-fit transition-all",
+          isOpen ? "w-0 scale-0 opacity-0" : ""
         )}
       >
         Menu
