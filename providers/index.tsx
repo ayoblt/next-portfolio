@@ -3,9 +3,9 @@ import { ToggleProvider } from "./toggle-provider";
 
 const Providers = ({ children }: { children: React.ReactNode }) => {
   return (
-    <FramerLazyMotion>
-      <ToggleProvider>{children}</ToggleProvider>
-    </FramerLazyMotion>
+    // <FramerLazyMotion>
+    <ToggleProvider>{children}</ToggleProvider>
+    // </FramerLazyMotion>
   );
 };
 

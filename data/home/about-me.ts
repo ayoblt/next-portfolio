@@ -1,4 +1,5 @@
 export const AboutMeData = {
+  title: "about-me",
   content: [
     `Hello, I’m Lateef!`,
     `I’m a self-taught front-end developer based in Lagos, Nigeria. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences.`,

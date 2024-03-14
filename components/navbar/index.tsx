@@ -45,7 +45,7 @@ export const Navbar = ({ className }: { className?: string }) => {
           duration: 0.2,
         }}
         className={cn(
-          "w-full fixed top-0 px-8 h-12 md:h-14 flex items-center justify-between z-20 backdrop-blur-md",
+          "w-full fixed top-0 px-8 h-12 md:h-14 flex items-center justify-between z-[999] backdrop-blur-md",
           className
         )}
       >

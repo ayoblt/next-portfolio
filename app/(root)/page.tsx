@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Header from "./header";
 import Quotes from "./quotes";
 import MyExpertise from "./my-expertise";
@@ -9,14 +8,14 @@ import Contacts from "./contacts";
 
 export default function Home() {
   return (
-    <main className="">
+    <div className="">
       <Header />
-      {/* <Quotes /> */}
+      <Quotes />
       <MyExpertise />
       <Projects />
       <AboutMe />
       <CTA />
       <Contacts />
-    </main>
+    </div>
   );
 }

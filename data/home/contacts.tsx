@@ -13,7 +13,7 @@ export const ContactsData = {
       link: "#",
     },
     {
-      icon: <MailSend className="w-6 h-5" />,
+      icon: <MailSend className="w-6 h-5 fill-foreground" />,
       label: "ayomidepakoo@gmail.com",
       link: "#",
     },

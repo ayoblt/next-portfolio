@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="text-small">
           <div className="mb-4 md:mb-3 flex flex-col items-center md:flex-row gap-1">
             <Logo />
-            <span className="text-colorTextPrimary">{FooterData.email}</span>
+            <Link href="#">{FooterData.email}</Link>
           </div>
           <p className="capitalize font-light">{FooterData.description}</p>
         </div>
