@@ -9,6 +9,7 @@ import MobileMenu from "@/components/navbar/mobile-menu";
 import MobileMenuToggler from "@/components/navbar/mobile-menu-toggler";
 import { Overlay } from "@/components/navbar/overlay";
 import Footer from "@/components/footer";
+import AnimatePresenceComp from "./animate-presence";
 
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] });
 
@@ -24,24 +25,26 @@ export default function RootLayout({
 }>) {
   return (
     <Providers>
-      <html lang="en" suppressHydrationWarning>
-        <body
-          className={cn(
-            "relative antialiased transition duration-100",
-            jetbrainsMono.className
-          )}
-          suppressHydrationWarning
-        >
-          <ThemeProvider attribute="class" defaultTheme="light">
-            <Navbar />
-            <Overlay />
-            <MobileMenu />
-            <MobileMenuToggler />
-            {children}
-            <Footer />
-          </ThemeProvider>
-        </body>
-      </html>
+      <AnimatePresenceComp>
+        <html lang="en" suppressHydrationWarning>
+          <body
+            className={cn(
+              "relative antialiased transition duration-100",
+              jetbrainsMono.className
+            )}
+            suppressHydrationWarning
+          >
+            <ThemeProvider attribute="class" defaultTheme="light">
+              <Navbar />
+              <Overlay />
+              <MobileMenu />
+              <MobileMenuToggler />
+              {children}
+              <Footer />
+            </ThemeProvider>
+          </body>
+        </html>
+      </AnimatePresenceComp>
     </Providers>
   );
 }
