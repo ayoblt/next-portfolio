@@ -30,6 +30,7 @@ export default function RootLayout({
             "relative antialiased transition duration-100",
             jetbrainsMono.className
           )}
+          suppressHydrationWarning
         >
           <ThemeProvider attribute="class" defaultTheme="light">
             <Navbar />

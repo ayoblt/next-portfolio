@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import {
-  m,
+  motion,
   AnimatePresence,
   useScroll,
   useMotionValueEvent,
@@ -32,7 +32,7 @@ export const Navbar = ({ className }: { className?: string }) => {
 
   return (
     <AnimatePresence mode="wait">
-      <m.nav
+      <motion.nav
         initial={{
           opacity: 1,
           y: 0,
@@ -52,7 +52,7 @@ export const Navbar = ({ className }: { className?: string }) => {
         <Logo />
         <DesktopMenu />
         <ThemeToggler />
-      </m.nav>
+      </motion.nav>
     </AnimatePresence>
   );
 };

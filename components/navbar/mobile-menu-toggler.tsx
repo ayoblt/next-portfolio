@@ -3,7 +3,7 @@
 import { useToggle } from "@/hooks/use-toggle";
 import { cn } from "@/lib/utils";
 import {
-  m,
+  motion,
   AnimatePresence,
   useScroll,
   useMotionValueEvent,
@@ -31,7 +31,7 @@ const MobileMenuToggler = () => {
 
   return (
     <AnimatePresence mode="wait">
-      <m.div
+      <motion.div
         initial={{
           opacity: 1,
           bottom: "1.75rem",
@@ -82,7 +82,7 @@ const MobileMenuToggler = () => {
         >
           Menu
         </p>
-      </m.div>
+      </motion.div>
     </AnimatePresence>
   );
 };

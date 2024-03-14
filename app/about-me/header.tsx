@@ -23,7 +23,7 @@ const Header = () => {
         <div className="flex flex-col md:flex-row justify-between max-md:gap-12 w-full py-8">
           <ul className="flex-1 flex flex-col gap-3">
             {AboutHeaderData.lines.map((line, idx) => (
-              <li key={idx} className="text-small leading-6">
+              <li key={idx} className="text-sm md:text-small leading-6">
                 <p>{line}</p>
               </li>
             ))}
