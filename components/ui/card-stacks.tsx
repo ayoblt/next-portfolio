@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { m } from "framer-motion";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 let interval: NodeJS.Timeout | undefined;
@@ -54,7 +54,7 @@ export const CardStack = ({
     >
       {cards.map((card, index) => {
         return (
-          <m.div
+          <motion.div
             key={card.id}
             className={cn(
               "absolute bg-background h-36 w-full md:w-96 p-4 shadow-lg border flex flex-col justify-between",
@@ -82,7 +82,7 @@ export const CardStack = ({
                 </p>
               )}
             </div>
-          </m.div>
+          </motion.div>
         );
       })}
     </div>
