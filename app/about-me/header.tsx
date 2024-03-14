@@ -15,10 +15,6 @@ import Image from "next/image";
 const Header = () => {
   return (
     <header className="flex items-center justify-center relative overflow-hidden antialiased mt-12 md:mt-14 py-8">
-      {/* <Spotlight
-        className="-top-40 left-0 md:left-32 lg:left-52 md:-top-20 fill-black"
-        fill="fill-headerFg"
-      /> */}
       <Wrapper className="">
         <div>
           <h2 className="text-headerFg">{AboutHeaderData.title}</h2>

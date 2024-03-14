@@ -1,12 +1,7 @@
-import FramerLazyMotion from "./framer-provider";
 import { ToggleProvider } from "./toggle-provider";
 
 const Providers = ({ children }: { children: React.ReactNode }) => {
-  return (
-    // <FramerLazyMotion>
-    <ToggleProvider>{children}</ToggleProvider>
-    // </FramerLazyMotion>
-  );
+  return <ToggleProvider>{children}</ToggleProvider>;
 };
 
 export default Providers;

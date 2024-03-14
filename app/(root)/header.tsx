@@ -7,14 +7,8 @@ import Wrapper from "@/components/wrapper";
 import { HeaderData } from "@/data/home/header";
 import { splitString } from "@/lib/utils";
 
-// import { HeaderData } from "data/home/header";
-const Header = () => {
-  const code = `
-// complete the game to continue
-// you can also see it on my Github page
-const githubLink = “https://github.com/example/url”
-  `;
 
+const Header = () => {
   return (
     <header className="max-md:min-h-screen max-md:pt-10 md:h-screen flex items-center justify-center text-center md:text-start relative overflow-hidden antialiased">
       <Spotlight

@@ -2,10 +2,6 @@ import { Card, CardGrid } from "@/components/card";
 import ArrowRight from "@/components/icons/arrow-right";
 import RectangleBig from "@/components/icons/rectangle-big";
 import SectionHeader from "@/components/section-header";
-import {
-  SlideRightTransition,
-  SlideUpTransition,
-} from "@/components/slide-transitions";
 import { Button } from "@/components/ui/button";
 import Wrapper from "@/components/wrapper";
 import { ProjectsData } from "@/data/projects";
@@ -19,8 +15,7 @@ const Projects = () => {
         strokeClassName="stroke-border"
       />
       <Wrapper>
-        {/* <div className="flex justify-between mb-10"> */}
-        <SlideRightTransition className="flex justify-between mb-10">
+        <div className="flex justify-between mb-10">
           <SectionHeader>projects</SectionHeader>
 
           <Button variant="link" asChild>
@@ -31,14 +26,12 @@ const Projects = () => {
               View all <ArrowRight />
             </Link>
           </Button>
-        </SlideRightTransition>
-        {/* </div> */}
+        </div>
+
         <div className="flex justify-center">
           <CardGrid>
             {ProjectsData.map((project, idx) => (
-              <SlideUpTransition key={idx} custom={idx}>
-                <Card imageUrl={project.imageUrl} project={project} />
-              </SlideUpTransition>
+              <Card key={idx} imageUrl={project.imageUrl} project={project} />
             ))}
           </CardGrid>
         </div>
