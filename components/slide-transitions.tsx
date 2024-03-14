@@ -55,7 +55,7 @@ const SlideUpTransition = ({
       initial="hidden"
       whileInView="visible"
       custom={custom}
-      viewport={viewport}
+      viewport={viewport || { amount: 0.2, once: true }}
       variants={slideUpVariants}
       className={className}
     >
@@ -75,7 +75,7 @@ const SlideRightTransition = ({
       initial="hidden"
       whileInView="visible"
       custom={custom}
-      viewport={viewport || { amount: 0.2 }}
+      viewport={viewport || { amount: 0.2, once: true }}
       variants={slideRightVariants}
       className={className}
     >
