@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-const LinkedInIcon = ({ className }: { className: string }) => {
+const LinkedInIcon = ({ className }: { className?: string }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
