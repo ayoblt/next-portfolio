@@ -13,7 +13,7 @@ const initialState = {
   message: "",
   status:
     {
-      ok: false,
+      ok: undefined || false,
     } || undefined,
   errors: null || undefined,
 };
