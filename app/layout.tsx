@@ -10,6 +10,7 @@ import MobileMenuToggler from "@/components/navbar/mobile-menu-toggler";
 import { Overlay } from "@/components/navbar/overlay";
 import Footer from "@/components/footer";
 import AnimatePresenceComp from "./animate-presence";
+import { Toaster } from "@/components/ui/sonner";
 
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] });
 
@@ -42,6 +43,7 @@ export default function RootLayout({
               <MobileMenuToggler />
               {children}
               <Footer />
+              <Toaster richColors position="top-right" />
             </ThemeProvider>
           </body>
         </html>

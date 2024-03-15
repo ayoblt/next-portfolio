@@ -9,30 +9,26 @@ export interface ProjectsDataType {
 
 export const ProjectsData: ProjectsDataType[] = [
   {
-    tags: ["ReactJS", "Next.js", "remix"],
+    tags: ["Html", "Css", "JavaScript"],
     title: "Insure Landing Page",
-    description:
-      "Figma landing page about service for viewing chess tournaments",
-    liveLink: "#",
-    gitLink: "#",
-    imageUrl: "/images/chertnodes.jpg",
+    description: "A landing page for an insurance website",
+    liveLink: "https://ayoblt.github.io/insure-project/",
+    gitLink: "https://github.com/ayoblt/insure-project",
+    imageUrl: "/images/insure.png",
+  },
+
+  {
+    tags: ["ReactJs", "NextJs", "TypeScript", "Framer motion"],
+    title: "Brochureware Website",
+    description: "Website for a construction company detail",
+    liveLink: "https://saheed-taiwo-brochureware.vercel.app/",
+    imageUrl: "/images/brochureware.png",
   },
   {
-    tags: ["Html", "CSS", "django", "nextjs", "remix.run", "python", "prisma"],
+    tags: ["React", "NextJs", "TypeScript", "Framer motion"],
     title: "Portfolio Website",
-    description:
-      "Figma landing page about service for viewing chess tournaments",
-    liveLink: "#",
-    gitLink: "#",
-    imageUrl: "/images/kahoot.png",
-  },
-  {
-    tags: ["Html", "CSS", "django"],
-    title: "Cooperate finance",
-    description:
-      "Figma landing page about service for viewing checkers tournaments",
-    liveLink: "#",
-    gitLink: "#",
-    imageUrl: "/images/projectX.png",
+    description: "You are using it right now",
+    gitLink: "https://github.com/ayoblt/next-portfolio",
+    imageUrl: "/images/personal-portfolio.png",
   },
 ];

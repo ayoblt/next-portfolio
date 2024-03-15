@@ -18,14 +18,14 @@ const Projects = () => {
         <div className="flex justify-between mb-10">
           <SectionHeader>projects</SectionHeader>
 
-          <Button variant="link" asChild>
+          {/* <Button variant="link" asChild>
             <Link
               href="/projects"
               className="flex gap-2 items-center text-small"
             >
               View all <ArrowRight />
             </Link>
-          </Button>
+          </Button> */}
         </div>
 
         <div className="flex justify-center">

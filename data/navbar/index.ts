@@ -12,10 +12,10 @@ export const NavRoutes: NavRoute[] = [
     label: "about-me",
     path: "/about-me",
   },
-  {
-    label: "works",
-    path: "/works",
-  },
+  // {
+  //   label: "works",
+  //   path: "/works",
+  // },
   {
     label: "contact-me",
     path: "/contact-me",
