@@ -9,7 +9,7 @@ export const QuotesData = [
         <Highlight>patience</Highlight> (because I might need it).
       </p>
     ),
-    name: "Lateef Taiwo",
+    name: "Lateef",
   },
   {
     id: 1,
@@ -21,7 +21,7 @@ export const QuotesData = [
         (...proceeds to read overnight)
       </p>
     ),
-    name: "Every student",
+    name: "OAU students",
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ export const QuotesData = [
         well... <Highlight>I hope</Highlight>.
       </p>
     ),
-    name: "Lateef Taiwo",
+    name: "Lateef",
   },
   {
     id: 3,
@@ -78,20 +78,20 @@ export const QuotesData = [
     ),
     name: "Dr Who",
   },
-  {
-    id: 7,
-    content: <p>I used to be indecisive, but now I'm not so sure</p>,
-    name: "Groucho Marx",
-  },
-  {
-    id: 8,
-    content: (
-      <p>
-        "Even small nibbles build a wall, so start small and conquer it all"
-      </p>
-    ),
-    name: "Nibble",
-  },
+  // {
+  //   id: 7,
+  //   content: <p>I used to be indecisive, but now I'm not so sure</p>,
+  //   name: "Groucho Marx",
+  // },
+  // {
+  //   id: 8,
+  //   content: (
+  //     <p>
+  //       "Even small nibbles build a wall, so start small and conquer it all"
+  //     </p>
+  //   ),
+  //   name: "Nibble",
+  // },
   {
     id: 9,
     content: (
@@ -103,7 +103,7 @@ export const QuotesData = [
         </Highlight>
       </p>
     ),
-    name: "Don't know",
+    name: "Lateef",
   },
   {
     id: 10,
@@ -119,7 +119,7 @@ export const QuotesData = [
         </Highlight>
       </p>
     ),
-    name: "Lateef Taiwo",
+    name: "Lateef",
   },
   {
     id: 11,
@@ -129,31 +129,31 @@ export const QuotesData = [
         don't be a fool on the net
       </p>
     ),
-    name: "Nibble",
+    name: "Lateef",
   },
-  {
-    id: 12,
-    content: (
-      <p>
-        Just a nibble of your{" "}
-        <Highlight className="bg-yellow-300 text-yellow-700 dark:bg-red-700/[0.2 dark:text-yellow-500">
-          smile
-        </Highlight>
-        , brightens my day for a long, long while
-      </p>
-    ),
-    name: "Nibble",
-  },
+  // {
+  //   id: 12,
+  //   content: (
+  //     <p>
+  //       Just a nibble of your{" "}
+  //       <Highlight className="bg-yellow-300 text-yellow-700 dark:bg-red-700/[0.2 dark:text-yellow-500">
+  //         smile
+  //       </Highlight>
+  //       , brightens my day for a long, long while
+  //     </p>
+  //   ),
+  //   name: "Nibble",
+  // },
   {
     id: 13,
     content: <p>I'm Batman</p>,
-    name: "Lateef Taiwo",
+    name: "Lateef",
   },
-  {
-    id: 14,
-    content: (
-      <p>Life's too short for big bites, take a nibble, savor the delight</p>
-    ),
-    name: "Nibble",
-  },
+  // {
+  //   id: 14,
+  //   content: (
+  //     <p>Life's too short for big bites, take a nibble, savor the delight</p>
+  //   ),
+  //   name: "Nibble",
+  // },
 ];

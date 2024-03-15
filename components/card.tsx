@@ -57,9 +57,9 @@ const CardContent = ({ project }: CardContentProps) => {
         <div className="flex gap-2">
           {project.liveLink && (
             <Button asChild size="sm" className="rounded-none">
-              <Link href={project.liveLink} className="flex gap-2">
+              <a target="_blank" href={project.liveLink} className="flex gap-2">
                 live <ExternalLinkIcon />
-              </Link>
+              </a>
             </Button>
           )}
           {project.gitLink && (
@@ -69,9 +69,9 @@ const CardContent = ({ project }: CardContentProps) => {
               size="sm"
               className="rounded-none "
             >
-              <Link href={project.gitLink} className="flex gap-2">
+              <a target="_blank" href={project.gitLink} className="flex gap-2">
                 github <CodeSlashIcon />
-              </Link>
+              </a>
             </Button>
           )}
         </div>

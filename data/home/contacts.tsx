@@ -20,7 +20,7 @@ export const ContactsData = {
     {
       icon: <TwitterXIcon className="w-6 h-5" />,
       label: "_lateeftaiwo",
-      link: "#",
+      link: "https://twitter.com/_lateeftaiwo",
     },
   ],
 };

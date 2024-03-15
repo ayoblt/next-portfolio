@@ -12,22 +12,22 @@ export const ContactMeHeaderData = {
   socials: [
     {
       label: "twitter",
-      link: "#",
+      link: "https://twitter.com/_lateeftaiwo",
       icon: <TwitterXIcon className="fill-white w-4 md:w-5 h-5 md:h-6" />,
     },
     {
       label: "github",
-      link: "#",
+      link: "https://github.com/ayoblt",
       icon: <GithubIcon className="fill-white w-4 md:w-5 h-5 md:h-6" />,
     },
     {
       label: "linkedIn",
-      link: "#",
+      link: "https://www.linkedin.com/in/lateef-taiwo-94b102217/",
       icon: <LinkedInIcon className="fill-white w-4 md:w-5 h-5 md:h-6" />,
     },
     {
       label: "whatsapp",
-      link: "#",
+      link: "https://wa.me/2348150741801",
       icon: <WhatsappFillIcon className="fill-white w-4 md:w-5 h-5 md:h-6" />,
     },
   ],

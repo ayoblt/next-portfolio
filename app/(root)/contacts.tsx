@@ -23,13 +23,13 @@ const Contacts = () => {
             <ul className="flex flex-col gap-2">
               {ContactsData.contactLinks.map((item, idx) => (
                 <li key={idx}>
-                  <Link
+                  <a
                     href={item.link}
                     className="flex gap-1 items-center text-small text-colorTextPrimary"
                   >
                     {item.icon}
                     <span>{item.label}</span>
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>

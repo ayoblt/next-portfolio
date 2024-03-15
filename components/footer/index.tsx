@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="text-small">
           <div className="mb-4 md:mb-3 flex flex-col items-center md:flex-row gap-1">
             <Logo />
-            <Link href="#">{FooterData.email}</Link>
+            <a href={FooterData.mailLink}>{FooterData.email}</a>
           </div>
           <p className="capitalize font-light">{FooterData.description}</p>
         </div>
@@ -20,7 +20,7 @@ const Footer = () => {
           <ul className="flex gap-2 items-center justify-center">
             {FooterData.links.map((item, idx) => (
               <li key={idx} className="">
-                <Link href={item.link}>{item.icon}</Link>
+                <a href={item.link}>{item.icon}</a>
               </li>
             ))}
           </ul>
