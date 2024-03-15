@@ -47,9 +47,7 @@ export async function SendMessage(prevState: any, formData: FormData) {
   revalidatePath("/contact-me");
   return {
     message: "Message successfully sent!",
-    status: {
-      ok: true,
-    },
+    status: "success",
   };
   // if (!parse.success) {
   //   return { message: "Failed to create todo" };

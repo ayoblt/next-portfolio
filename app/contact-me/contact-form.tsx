@@ -11,10 +11,7 @@ import { toast } from "sonner";
 
 const initialState = {
   message: "",
-  status:
-    {
-      ok: undefined || false,
-    } || undefined,
+  status: "",
   errors: null || undefined,
 };
 
@@ -45,10 +42,10 @@ export function ContactForm() {
   const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
-    if (state.status) {
-      const ok = state.status.ok;
+    if (Boolean(state.status)) {
+      const status = state.status;
 
-      if (ok) {
+      if (status === "success") {
         if (formRef?.current) {
           toast.success(
             "Your message has been sent successfully! We'll be in touch soon."
