@@ -10,12 +10,12 @@ export const ContactsData = {
     {
       icon: <WhatsappFillIcon className="w-6 h-5" />,
       label: "+2348150741801",
-      link: "#",
+      link: "https://wa.me/2348150741801",
     },
     {
       icon: <MailSend className="w-6 h-5 fill-foreground" />,
-      label: "ayomidepakoo@gmail.com",
-      link: "#",
+      label: "itslateeftaiwo@gmail.com",
+      link: "mailto:itslateeftaiwo@gmail.com",
     },
     {
       icon: <TwitterXIcon className="w-6 h-5" />,
