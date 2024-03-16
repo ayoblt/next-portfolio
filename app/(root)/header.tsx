@@ -1,12 +1,11 @@
 import { Highlight } from "@/components/highlight";
 import TicTacToe from "@/components/tic-tac-toe";
 import { Spotlight } from "@/components/ui/spotlight";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import { TypewriterEffect } from "@/components/ui/typewriter-effect";
+// import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+// import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import Wrapper from "@/components/wrapper";
 import { HeaderData } from "@/data/home/header";
-import { splitString } from "@/lib/utils";
-
+// import { splitString } from "@/lib/utils";
 
 const Header = () => {
   return (
@@ -23,18 +22,18 @@ const Header = () => {
               <Highlight>{HeaderData.greeting.middle}</Highlight>
               {HeaderData.greeting.end}
             </p>
-            <TypewriterEffect
+            {/* <TypewriterEffect
               words={splitString(HeaderData.name)}
               className="text-4xl md:text-5xl lg:text-6xl leading-10 md:leading-[4rem] lg:leading-[5rem] text-headerFg whitespace-nowrap delay-0"
               cursorClassName="hidden"
-            />
+            /> */}
             <h3 className="text-xl md:text-[1.75rem] lg:text-3xl text- mb-4 md:mb-2 bg-emerald-100 text-emerald-700 dark:bg-transparent dark:text-primary px-1 py-0.5">
               {HeaderData.description}
             </h3>
-            <TextGenerateEffect
+            {/* <TextGenerateEffect
               words={HeaderData.playText}
               className="text-small text-white py-1 px-3 rounded-md bg-backgroundDarker dark:bg-backgroundDark w-fit delay-0"
-            />
+            /> */}
           </div>
           <div className="mt-10 text-start text-xs md:text-small">
             <ul className="mb-2 flex flex-col gap-1">

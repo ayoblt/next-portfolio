@@ -1,5 +1,5 @@
 import Header from "./header";
-import Quotes from "./quotes";
+// import Quotes from "./quotes";
 import MyExpertise from "./my-expertise";
 import Projects from "./projects";
 import AboutMe from "./about-me";
@@ -8,14 +8,14 @@ import Contacts from "./contacts";
 
 export default function Home() {
   return (
-    <>
+    <main>
       <Header />
-      <Quotes />
+      {/* <Quotes /> */}
       <MyExpertise />
       <Projects />
       <AboutMe />
       <CTA />
       <Contacts />
-    </>
+    </main>
   );
 }

@@ -9,7 +9,7 @@ import MobileMenu from "@/components/navbar/mobile-menu";
 import MobileMenuToggler from "@/components/navbar/mobile-menu-toggler";
 import { Overlay } from "@/components/navbar/overlay";
 import Footer from "@/components/footer";
-import AnimatePresenceComp from "./animate-presence";
+// import AnimatePresenceComp from "./animate-presence";
 import { Toaster } from "@/components/ui/sonner";
 
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] });
@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <Providers>
-      <AnimatePresenceComp>
+      {/* <AnimatePresenceComp> */}
         <html lang="en" suppressHydrationWarning>
           <body
             className={cn(
@@ -47,7 +47,7 @@ export default function RootLayout({
             </ThemeProvider>
           </body>
         </html>
-      </AnimatePresenceComp>
+      {/* </AnimatePresenceComp> */}
     </Providers>
   );
 }

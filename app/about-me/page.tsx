@@ -12,11 +12,11 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <>
+    <main>
       <Header />
       <WhyChooseMe />
       <CTA />
       <MyFunFacts />
-    </>
+    </main>
   );
 }

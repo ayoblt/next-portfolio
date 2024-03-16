@@ -4,7 +4,7 @@ import { NavRoutes } from "@/data/navbar";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import SquigglyUnderline from "../squigly-underline";
+// import SquigglyUnderline from "../squigly-underline";
 
 const DesktopMenu = () => {
   const pathname = usePathname();
@@ -21,7 +21,7 @@ const DesktopMenu = () => {
           <Link href={route.path} className="relative">
             {route.label}
 
-            {pathname === route.path && <SquigglyUnderline />}
+            {/* {pathname === route.path && <SquigglyUnderline />} */}
           </Link>
         </li>
       ))}

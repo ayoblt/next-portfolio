@@ -4,7 +4,7 @@ import { NavRoutes } from "@/data/navbar";
 import { useToggle } from "@/hooks/use-toggle";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import SquigglyUnderline from "../squigly-underline";
+// import SquigglyUnderline from "../squigly-underline";
 import { usePathname } from "next/navigation";
 
 const MobileMenu = () => {
@@ -30,7 +30,7 @@ const MobileMenu = () => {
             onClick={handleToggle}
           >
             {route.label}
-            {pathname === route.path && <SquigglyUnderline />}
+            {/* {pathname === route.path && <SquigglyUnderline />} */}
           </Link>
         </li>
       ))}
