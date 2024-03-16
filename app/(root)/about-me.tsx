@@ -15,19 +15,19 @@ const AboutMe = () => {
           <div className="flex-1">
             <ul className="flex flex-col gap-4 md:gap-6 mb-8">
               {AboutMeData.content.map((item, idx) => (
-                <li key={idx} className=" text-sm lg:text-[0.9rem]">
+                <li key={idx} className="slideUp text-sm lg:text-[0.9rem]">
                   <p>{item}</p>
                 </li>
               ))}
             </ul>
-            <Button variant="outline" size="sm" asChild>
+            <Button variant="outline" size="sm" asChild className="slideUp">
               <Link href={AboutMeData.link} className="flex gap-2 group">
                 read more{" "}
                 <ArrowRight className="fill-primary group-hover:fill-white" />
               </Link>
             </Button>
           </div>
-          <div className="flex-1 flex justify-center relative border-y border-primary">
+          <div className="flex-1 flex justify-center relative border-y border-primary slideUp">
             <Image
               src={AboutMeData.imageUrl}
               alt="profile pic"

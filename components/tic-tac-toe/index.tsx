@@ -1,7 +1,7 @@
 const TicTacToe = () => {
   const boxCount = Array(9).fill(null);
   return (
-    <div className="h-80 w-full sm:w-72 lg:h-96 bg-transparent border p-6 rounded-">
+    <div className="h-80 w-full sm:w-72 lg:h-96 bg-transparent border p-6 slideUp">
       <div className="bg-backgroundDarker w-full h-full rounded-md overflow-hidden">
         <ul className="grid grid-cols-3 grid-rows-3 w-full h-full">
           {boxCount.map((_, idx) => (

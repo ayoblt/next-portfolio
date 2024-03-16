@@ -11,7 +11,7 @@ const MyExpertise = () => {
           <SectionHeader className="mb-10">
             {MyExpertiseData.title}
           </SectionHeader>
-          <p className="mx-auto text-center text-small md:text-sm md:w-2/3 text-colorTextPrimary">
+          <p className="slideUp mx-auto text-center text-small md:text-sm md:w-2/3 text-colorTextPrimary">
             {MyExpertiseData.description}
           </p>
         </div>

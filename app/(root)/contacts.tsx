@@ -11,13 +11,13 @@ const Contacts = () => {
         <SectionHeader className="mb-8">contacts</SectionHeader>
         <div className="flex flex-col md:flex-row items-center md:items-start gap-16 justify-between">
           <div className="flex flex-col gap-6 text-center md:text-start items-center md:items-start justify-between">
-            <p className="text-small text-colorTextPrimary sm:w-96">
+            <p className="text-small text-colorTextPrimary sm:w-96 slideUp">
               {ContactsData.description}
             </p>
             <SendMessageBtn />
           </div>
           <div className="border border-colorBorder p-3 w-fit">
-            <h6 className="text-sm text-colorTextSecondary mb-2">
+            <h6 className="text-sm text-colorTextSecondary mb-2 slideUp">
               {ContactsData.socialMessage}
             </h6>
             <ul className="flex flex-col gap-2">
@@ -25,7 +25,7 @@ const Contacts = () => {
                 <li key={idx}>
                   <a
                     href={item.link}
-                    className="flex gap-1 items-center text-small text-colorTextPrimary"
+                    className="flex gap-1 items-center text-small text-colorTextPrimary slideUp"
                   >
                     {item.icon}
                     <span>{item.label}</span>

@@ -6,10 +6,12 @@ import Image from "next/image";
 const Header = () => {
   return (
     <header className="flex items-center justify-center relative overflow-hidden antialiased mt-12 md:mt-14 py-8">
-      <Wrapper className="">
+      <Wrapper className="slideUp">
         <div>
-          <h2 className="text-headerFg">{AboutHeaderData.path}</h2>
-          <span className="text-xs">{AboutHeaderData.pathDescription}</span>
+          <h2 className="text-headerFg slideRight">{AboutHeaderData.path}</h2>
+          <span className="text-xs slideRight">
+            {AboutHeaderData.pathDescription}
+          </span>
         </div>
         <div className="flex flex-col md:flex-row justify-between max-md:gap-12 w-full py-8">
           <ul className="flex-1 flex flex-col gap-3">

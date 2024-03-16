@@ -8,7 +8,7 @@ import Contacts from "./contacts";
 
 export default function Home() {
   return (
-    <main>
+    <main className="pageSlideUp">
       <Header />
       {/* <Quotes /> */}
       <MyExpertise />

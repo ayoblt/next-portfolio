@@ -17,33 +17,39 @@ const Header = () => {
       <Wrapper className="flex flex-col md:flex-row items-center justify-center gap-10 w-full py-16">
         <div className="flex flex-col justify-evenly">
           <div>
-            <p className="">
+            <p className="slideRight">
               {HeaderData.greeting.start}
               <Highlight>{HeaderData.greeting.middle}</Highlight>
               {HeaderData.greeting.end}
             </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl leading-10 md:leading-[4rem] lg:leading-[5rem] text-headerFg whitespace-nowrap slideRight">
+              {HeaderData.name}
+            </h1>
             {/* <TypewriterEffect
               words={splitString(HeaderData.name)}
               className="text-4xl md:text-5xl lg:text-6xl leading-10 md:leading-[4rem] lg:leading-[5rem] text-headerFg whitespace-nowrap delay-0"
               cursorClassName="hidden"
             /> */}
-            <h3 className="text-xl md:text-[1.75rem] lg:text-3xl text- mb-4 md:mb-2 bg-emerald-100 text-emerald-700 dark:bg-transparent dark:text-primary px-1 py-0.5">
+            <h3 className="slideRight text-xl md:text-[1.75rem] lg:text-3xl text- mb-4 md:mb-2 bg-emerald-100 text-emerald-700 dark:bg-transparent dark:text-primary px-1 py-0.5 ">
               {HeaderData.description}
             </h3>
             {/* <TextGenerateEffect
               words={HeaderData.playText}
               className="text-small text-white py-1 px-3 rounded-md bg-backgroundDarker dark:bg-backgroundDark w-fit delay-0"
             /> */}
+            <p className="slideRight text-small text-white py-1 px-3 rounded-md bg-backgroundDarker dark:bg-backgroundDark w-fit">
+              {HeaderData.playText}
+            </p>
           </div>
           <div className="mt-10 text-start text-xs md:text-small">
-            <ul className="mb-2 flex flex-col gap-1">
+            <ul className="mb-2 flex flex-col gap-1 slideRight">
               {HeaderData.commentCodes.map((comment, idx) => (
                 <li key={idx}>
                   <span>{comment}</span>
                 </li>
               ))}
             </ul>
-            <div className="font-medium">
+            <div className="font-medium slideRight">
               <span className="text-accent">{HeaderData.github.const}</span>{" "}
               <span className="text-primary">{HeaderData.github.variable}</span>{" "}
               <span className="text-headerFg">{HeaderData.github.equal}</span>{" "}

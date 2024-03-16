@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { Highlight } from "./highlight";
 
 const SectionHeader = ({
@@ -8,7 +9,7 @@ const SectionHeader = ({
   className?: string;
 }) => {
   return (
-    <Highlight className={className}>
+    <Highlight className={cn("slideRight", className)}>
       <h3>
         <span>#</span>
         {children}

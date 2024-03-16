@@ -3,7 +3,7 @@ import Header from "./header";
 
 export default function ContactMe() {
   return (
-    <main>
+    <main className="pageSlideUp">
       <Header />
       <Contact />
     </main>

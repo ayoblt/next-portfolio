@@ -10,7 +10,7 @@ const MyFunFacts = () => {
         <div className="flex flex-col md:flex-row">
           <ul className="flex-1 flex flex-wrap gap-3">
             {MyFunFactsData.facts.map((item, idx) => (
-              <li className="py-1 px-2 border w-fit" key={idx}>
+              <li className="py-1 px-2 border w-fit slideRight" key={idx}>
                 <span className="text-xs">{item}</span>
               </li>
             ))}

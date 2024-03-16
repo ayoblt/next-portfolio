@@ -24,7 +24,7 @@ const CardGrid = ({ children }: { children: React.ReactNode }) => {
 
 const Card = ({ project, imageUrl }: CardProps) => {
   return (
-    <div>
+    <div className="slideUp">
       {imageUrl && (
         <div className="border w-60 md:w-full lg:w-60">
           <Image
