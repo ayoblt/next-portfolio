@@ -75,7 +75,7 @@ export function ContactForm() {
             type="text"
             id="firstName"
             name="firstName"
-            placeholder="Enter First Name"
+            placeholder="Bukola"
             className="border text-sm rounded-md h-10 px-2 focus:ring-0 focus:outline-none placeholder:text-xs bg-backgroundDark focus:bg-backgroundDarker focus:text-headerFg"
             required
           />
@@ -99,7 +99,7 @@ export function ContactForm() {
             id="email"
             name="email"
             defaultValue=""
-            placeholder="Enter Email"
+            placeholder="bukolaawele@email.com"
             className="border text-sm rounded-md h-10 px-2 focus:ring-0 focus:outline-none placeholder:text-xs bg-backgroundDark focus:bg-backgroundDarker focus:text-headerFg"
             required
           />
@@ -147,7 +147,7 @@ export function ContactForm() {
           <textarea
             id="message"
             name="message"
-            placeholder="Enter First Name"
+            placeholder="Describe your project here..."
             className="border text-sm rounded-md py-2 px-2 focus:ring-0 focus:outline-none placeholder:text-xs bg-backgroundDark focus:bg-backgroundDarker focus:text-headerFg h-32 resize-y"
             required
           />
