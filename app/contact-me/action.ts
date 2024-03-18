@@ -64,37 +64,25 @@ export async function SendMessage(prevState: any, formData: FormData) {
   const data = validatedFields.data;
 
   try {
-    const user = await db.user.findUnique({
-      where: {
-        email: data.email,
-      },
-    });
-
-    if (!user) {
-      const newUser = await db.user.create({
-        data: {
-          email: data.email as string,
-          name: data.firstName as string,
-          messages: {
+    const newMessage = await db.message.create({
+      data: {
+        service: data.service,
+        content: data.message,
+        sender: {
+          connectOrCreate: {
+            where: {
+              email: data.email,
+            },
             create: {
-              service: data.service as string,
-              content: data.message as string,
+              email: data.email,
+              name: data.firstName,
             },
           },
         },
-      });
+      },
+    });
 
-      if (!newUser) throw new Error("Error creating message");
-
-      revalidatePath("/contact-me");
-      return {
-        message: "Message successfully sent!",
-        status: "success",
-      };
-    }
-
-    createMessage(data.service, data.message, user.id);
-
+    console.log(newMessage);
     revalidatePath("/contact-me");
     return {
       message: "Message successfully sent!",
