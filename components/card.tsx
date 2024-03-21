@@ -24,15 +24,15 @@ const CardGrid = ({ children }: { children: React.ReactNode }) => {
 
 const Card = ({ project, imageUrl }: CardProps) => {
   return (
-    <div className="slideUp">
+    <div className="border lg:w-60">
       {imageUrl && (
-        <div className="border w-60 md:w-full lg:w-60">
+        <div className="w-fit">
           <Image
             src={imageUrl}
             alt={project.title}
             width={331}
             height={202}
-            className="object-contain "
+            className="object-cover "
           />
         </div>
       )}
@@ -43,8 +43,8 @@ const Card = ({ project, imageUrl }: CardProps) => {
 
 const CardContent = ({ project }: CardContentProps) => {
   return (
-    <div className="border w-60 md:w-full lg:w-60">
-      <ul className="flex gap-2 text-xs py-2 px-2 border-b flex-wrap">
+    <div className="w-full border-t h-fit">
+      <ul className="flex gap-2 text-small py-2 px-2 border-b flex-wrap">
         {project.tags.map((tag, idx) => (
           <li key={idx} className="">
             {tag}
@@ -52,8 +52,8 @@ const CardContent = ({ project }: CardContentProps) => {
         ))}
       </ul>
       <div className="px-3 py-3">
-        <h2 className="text-headerFg font-medium mb-4">{project.title}</h2>
-        <p className="text-small mb-3">{project.description}</p>
+        <h2 className="text-headerFg font-medium mb-3">{project.title}</h2>
+        <p className="text-sm sm:text-base mb-3">{project.description}</p>
         <div className="flex gap-2">
           {project.liveLink && (
             <Button asChild size="sm" className="rounded-none">

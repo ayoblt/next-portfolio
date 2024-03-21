@@ -11,7 +11,7 @@ const WhyChooseMe = () => {
           <SectionHeader className="mb-10">
             {WhyChooseMeData.title}
           </SectionHeader>
-          <p className="mx-auto text-center md:text-sm md:w-2/3 text-colorTextPrimary">
+          <p className="mx-auto text-center text-sm sm:text-base md:w-2/3 text-colorTextPrimary">
             {WhyChooseMeData.description}
           </p>
         </div>

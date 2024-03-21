@@ -3,9 +3,9 @@ import Header from "./header";
 
 export default function ContactMe() {
   return (
-    <main className="pageSlideUp">
+    <div className="pageSlideUp">
       <Header />
       <Contact />
-    </main>
+    </div>
   );
 }

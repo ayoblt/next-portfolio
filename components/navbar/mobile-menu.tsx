@@ -20,7 +20,7 @@ const MobileMenu = () => {
         <li
           key={route.label}
           className={cn(
-            "text-small capitalize w-full text-center font-medium tracking-wider py-1 ",
+            "text-sm capitalize w-full text-center font-medium tracking-wider py-1 ",
             isOpen ? "opacity-100 translate-y-0" : "translate-y-5 opacity-0"
           )}
         >

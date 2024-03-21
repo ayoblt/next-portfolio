@@ -2,13 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body,
+:root {
+  height: 100%;
+}
+
 @layer base {
   :root {
     --text-small: 0.8rem;
     --header-foreground: #011627;
 
     --background: 0 0% 100%;
-    --foreground: 220 13% 46%;
+    --foreground: 220 13% 36%;
 
     --background-dark: #e0e0e0;
     --background-darker: #d0d0d0;
@@ -42,10 +48,10 @@
   }
 
   .dark {
-    --header-foreground: #ffffff;
+    --header-foreground: #e6e6e6;
 
     --background: 207 95% 8%;
-    --foreground: 210 22% 48%;
+    --foreground: 220 13% 45%;
 
     --background-dark: #011221;
     --background-darker: #01080e;

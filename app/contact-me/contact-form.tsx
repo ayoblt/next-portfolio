@@ -68,7 +68,10 @@ export function ContactForm() {
     >
       <div className="flex flex-col gap-3">
         <div className="flex flex-col gap-1">
-          <label htmlFor="firstName" className="text-headerFg text-small">
+          <label
+            htmlFor="firstName"
+            className="text-headerFg max-sm:text-sm font-medium"
+          >
             First Name
           </label>
           <input
@@ -76,7 +79,7 @@ export function ContactForm() {
             id="firstName"
             name="firstName"
             placeholder="Bukola"
-            className="border text-sm rounded-md h-10 px-2 focus:ring-0 focus:outline-none placeholder:text-xs bg-backgroundDark focus:bg-backgroundDarker focus:text-headerFg"
+            className="border text-sm sm:text-base rounded-md h-10 px-2 focus:ring-0 focus:outline-none placeholder:text-sm bg-backgroundDark focus:bg-backgroundDarker text-headerFg placeholder:text-foreground"
             required
           />
           <p
@@ -91,7 +94,10 @@ export function ContactForm() {
         </div>
 
         <div className="flex flex-col gap-1">
-          <label htmlFor="email" className="text-headerFg text-small">
+          <label
+            htmlFor="email"
+            className="text-headerFg max-sm:text-sm font-medium"
+          >
             Email
           </label>
           <input
@@ -100,7 +106,7 @@ export function ContactForm() {
             name="email"
             defaultValue=""
             placeholder="bukolaawele@email.com"
-            className="border text-sm rounded-md h-10 px-2 focus:ring-0 focus:outline-none placeholder:text-xs bg-backgroundDark focus:bg-backgroundDarker focus:text-headerFg"
+            className="border text-sm sm:text-base rounded-md h-10 px-2 focus:ring-0 focus:outline-none placeholder:text-sm bg-backgroundDark focus:bg-backgroundDarker text-headerFg placeholder:text-foreground"
             required
           />
           <p
@@ -115,13 +121,16 @@ export function ContactForm() {
         </div>
 
         <div className="flex flex-col gap-1">
-          <label htmlFor="service" className="text-headerFg text-small">
+          <label
+            htmlFor="service"
+            className="text-headerFg max-sm:text-sm font-medium"
+          >
             Project Type
           </label>
           <select
             id="service"
             name="service"
-            className="border text-sm rounded-md h-10 px-2 focus:ring-0 focus:outline-none placeholder:text-xs bg-backgroundDark focus:bg-backgroundDarker focus:text-headerFg"
+            className="border text-sm sm:text-base rounded-md h-10 px-2 focus:ring-0 focus:outline-none placeholder:text-sm bg-backgroundDark focus:bg-backgroundDarker text-headerFg placeholder:text-foreground"
           >
             {ContactFormData.projectTypes.map((item, idx) => (
               <option key={idx} value={item.value}>
@@ -141,14 +150,17 @@ export function ContactForm() {
         </div>
 
         <div className="flex flex-col gap-1">
-          <label htmlFor="message" className="text-headerFg text-small">
+          <label
+            htmlFor="message"
+            className="text-headerFg max-sm:text-sm font-medium"
+          >
             Message
           </label>
           <textarea
             id="message"
             name="message"
             placeholder="Describe your project here..."
-            className="border text-sm rounded-md py-2 px-2 focus:ring-0 focus:outline-none placeholder:text-xs bg-backgroundDark focus:bg-backgroundDarker focus:text-headerFg h-32 resize-y"
+            className="border text-sm sm:text-base rounded-md py-2 px-2 focus:ring-0 focus:outline-none placeholder:text-sm bg-backgroundDark focus:bg-backgroundDarker text-headerFg placeholder:text-foreground h-32 resize-y"
             required
           />
           <p

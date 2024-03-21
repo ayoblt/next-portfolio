@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import Providers from "@/providers";
 import { Navbar } from "@/components/navbar";
@@ -9,10 +9,12 @@ import MobileMenu from "@/components/navbar/mobile-menu";
 import MobileMenuToggler from "@/components/navbar/mobile-menu-toggler";
 import { Overlay } from "@/components/navbar/overlay";
 import Footer from "@/components/footer";
-// import AnimatePresenceComp from "./animate-presence";
 import { Toaster } from "@/components/ui/sonner";
 
-const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] });
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700", "900"],
+});
 
 export const metadata: Metadata = {
   title: "Lateef Taiwo",
@@ -27,27 +29,25 @@ export default function RootLayout({
 }>) {
   return (
     <Providers>
-      {/* <AnimatePresenceComp> */}
-        <html lang="en" suppressHydrationWarning>
-          <body
-            className={cn(
-              "relative antialiased transition duration-100",
-              jetbrainsMono.className
-            )}
-            suppressHydrationWarning
-          >
-            <ThemeProvider attribute="class" defaultTheme="light">
-              <Navbar />
-              <Overlay />
-              <MobileMenu />
-              <MobileMenuToggler />
-              {children}
-              <Footer />
-              <Toaster richColors position="top-right" />
-            </ThemeProvider>
-          </body>
-        </html>
-      {/* </AnimatePresenceComp> */}
+      <html lang="en" suppressHydrationWarning>
+        <body
+          className={cn(
+            "relative antialiased transition duration-100",
+            roboto.className
+          )}
+          suppressHydrationWarning
+        >
+          <ThemeProvider attribute="class" defaultTheme="light">
+            <Navbar />
+            <Overlay />
+            <MobileMenu />
+            <MobileMenuToggler />
+            {children}
+            <Footer />
+            <Toaster richColors position="top-right" />
+          </ThemeProvider>
+        </body>
+      </html>
     </Providers>
   );
 }

@@ -3,7 +3,7 @@ const Copyright = () => {
 
   return (
     <div className="py-3 text-center slideUp">
-      <p className="text-xs text-colorTextPrimary">
+      <p className="text-small text-colorTextPrimary">
         &copy; Copyright {currentYear} by Lateef.
       </p>
     </div>

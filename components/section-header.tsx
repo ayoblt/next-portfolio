@@ -9,7 +9,7 @@ const SectionHeader = ({
   className?: string;
 }) => {
   return (
-    <Highlight className={cn("slideRight", className)}>
+    <Highlight className={cn("sm:text-lg", className)}>
       <h3>
         <span>#</span>
         {children}

@@ -12,11 +12,11 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <main className="pageSlideUp">
+    <div className="pageSlideUp">
       <Header />
       <WhyChooseMe />
       <CTA />
       <MyFunFacts />
-    </main>
+    </div>
   );
 }

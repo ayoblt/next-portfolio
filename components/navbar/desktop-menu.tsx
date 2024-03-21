@@ -9,7 +9,7 @@ import SquigglyUnderline from "../squigly-underline";
 const DesktopMenu = () => {
   const pathname = usePathname();
   return (
-    <ul className="hidden md:flex text-small gap-5">
+    <ul className="hidden md:flex gap-5">
       {NavRoutes.map((route) => (
         <li
           key={route.label}

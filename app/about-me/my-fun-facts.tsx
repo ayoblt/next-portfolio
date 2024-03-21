@@ -11,7 +11,7 @@ const MyFunFacts = () => {
           <ul className="flex-1 flex flex-wrap gap-3">
             {MyFunFactsData.facts.map((item, idx) => (
               <li className="py-1 px-2 border w-fit slideRight" key={idx}>
-                <span className="text-xs">{item}</span>
+                <span className="text-small sm:text-base">{item}</span>
               </li>
             ))}
           </ul>

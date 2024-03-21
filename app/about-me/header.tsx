@@ -1,3 +1,4 @@
+import PageHeader from "@/components/page-header";
 import SendMessageBtn from "@/components/ui/send-message-btn";
 import Wrapper from "@/components/wrapper";
 import { AboutHeaderData } from "@/data/about-me/header";
@@ -6,17 +7,15 @@ import Image from "next/image";
 const Header = () => {
   return (
     <header className="flex items-center justify-center relative overflow-hidden antialiased mt-12 md:mt-14 py-8">
-      <Wrapper className="slideUp">
-        <div>
-          <h2 className="text-headerFg slideRight">{AboutHeaderData.path}</h2>
-          <span className="text-xs slideRight">
-            {AboutHeaderData.pathDescription}
-          </span>
-        </div>
+      <Wrapper>
+        <PageHeader
+          path={AboutHeaderData.path}
+          pathDescription={AboutHeaderData.pathDescription}
+        />
         <div className="flex flex-col md:flex-row justify-between max-md:gap-12 w-full py-8">
           <ul className="flex-1 flex flex-col gap-3">
             {AboutHeaderData.lines.map((line, idx) => (
-              <li key={idx} className="text-sm md:text-small leading-6">
+              <li key={idx} className="text-sm md:text-base leading-6">
                 <p>{line}</p>
               </li>
             ))}
