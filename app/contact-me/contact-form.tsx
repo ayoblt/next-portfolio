@@ -8,6 +8,17 @@ import { cn } from "@/lib/utils";
 import Spinner from "@/components/icons/spinner";
 import { useEffect, useRef } from "react";
 import { toast } from "sonner";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 
 const initialState = {
   message: "",
@@ -68,18 +79,12 @@ export function ContactForm() {
     >
       <div className="flex flex-col gap-3">
         <div className="flex flex-col gap-1">
-          <label
-            htmlFor="firstName"
-            className="text-headerFg max-sm:text-sm font-medium"
-          >
-            First Name
-          </label>
-          <input
+          <Label htmlFor="firstName">First Name</Label>
+          <Input
             type="text"
             id="firstName"
             name="firstName"
             placeholder="Bukola"
-            className="border text-sm sm:text-base rounded-md h-10 px-2 focus:ring-0 focus:outline-none placeholder:text-sm bg-backgroundDark focus:bg-backgroundDarker text-headerFg placeholder:text-foreground"
             required
           />
           <p
@@ -94,19 +99,13 @@ export function ContactForm() {
         </div>
 
         <div className="flex flex-col gap-1">
-          <label
-            htmlFor="email"
-            className="text-headerFg max-sm:text-sm font-medium"
-          >
-            Email
-          </label>
-          <input
+          <Label htmlFor="email">Email</Label>
+          <Input
             type="email"
             id="email"
             name="email"
             defaultValue=""
             placeholder="bukolaawele@email.com"
-            className="border text-sm sm:text-base rounded-md h-10 px-2 focus:ring-0 focus:outline-none placeholder:text-sm bg-backgroundDark focus:bg-backgroundDarker text-headerFg placeholder:text-foreground"
             required
           />
           <p
@@ -121,23 +120,21 @@ export function ContactForm() {
         </div>
 
         <div className="flex flex-col gap-1">
-          <label
-            htmlFor="service"
-            className="text-headerFg max-sm:text-sm font-medium"
-          >
-            Project Type
-          </label>
-          <select
-            id="service"
-            name="service"
-            className="border text-sm sm:text-base rounded-md h-10 px-2 focus:ring-0 focus:outline-none placeholder:text-sm bg-backgroundDark focus:bg-backgroundDarker text-headerFg placeholder:text-foreground"
-          >
-            {ContactFormData.projectTypes.map((item, idx) => (
-              <option key={idx} value={item.value}>
-                {item.label}
-              </option>
-            ))}
-          </select>
+          <Label htmlFor="service">Project Type</Label>
+          <Select name="service">
+            <SelectTrigger className="w-full">
+              <SelectValue placeholder="Select a project type" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectGroup>
+                {ContactFormData.projectTypes.map((item, idx) => (
+                  <SelectItem value={item.value} key={idx}>
+                    {item.label}
+                  </SelectItem>
+                ))}
+              </SelectGroup>
+            </SelectContent>
+          </Select>
           <p
             className={cn(
               "text-transparent scale-0 text-xs",
@@ -150,17 +147,12 @@ export function ContactForm() {
         </div>
 
         <div className="flex flex-col gap-1">
-          <label
-            htmlFor="message"
-            className="text-headerFg max-sm:text-sm font-medium"
-          >
-            Message
-          </label>
-          <textarea
+          <Label htmlFor="message">Message</Label>
+          <Textarea
             id="message"
             name="message"
             placeholder="Describe your project here..."
-            className="border text-sm sm:text-base rounded-md py-2 px-2 focus:ring-0 focus:outline-none placeholder:text-sm bg-backgroundDark focus:bg-backgroundDarker text-headerFg placeholder:text-foreground h-32 resize-y"
+            className="h-32"
             required
           />
           <p
@@ -169,14 +161,10 @@ export function ContactForm() {
               state.errors?.message &&
                 "text-destructive dark:text-red-500 scale-1"
             )}
-            // hidden={!state.errors?.message}
           >
             {state.errors?.message ? state.errors.message[0] : "message"}
           </p>
         </div>
-        {/* <p aria-live="polite" className="sr-only" role="status">
-        {state?.message}
-      </p> */}
         <SubmitButton />
       </div>
     </form>

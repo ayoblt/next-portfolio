@@ -47,6 +47,7 @@ async function createMessage(service: string, message: string, id: number) {
 }
 
 export async function SendMessage(prevState: any, formData: FormData) {
+  console.log(formData);
   const validatedFields = schema.safeParse({
     firstName: formData.get("firstName"),
     email: formData.get("email"),
@@ -55,6 +56,7 @@ export async function SendMessage(prevState: any, formData: FormData) {
   });
 
   if (!validatedFields.success) {
+    // console.log(validatedFields.error.flatten().fieldErrors);
     return {
       message: "Invalid data",
       errors: validatedFields.error.flatten().fieldErrors,
@@ -89,6 +91,7 @@ export async function SendMessage(prevState: any, formData: FormData) {
       status: "success",
     };
   } catch (err) {
+    // console.log(err);
     return {
       message: "There was an error sending your message!",
       status: "failed",
