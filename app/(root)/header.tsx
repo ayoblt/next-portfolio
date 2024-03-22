@@ -1,7 +1,11 @@
-import { JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono, Bai_Jamjuree } from "next/font/google";
 
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
+});
+const baiJamjuree = Bai_Jamjuree({
+  subsets: ["latin"],
+  weight: ["600", "700"],
 });
 
 import { Highlight } from "@/components/highlight";
@@ -26,10 +30,20 @@ const Header = () => {
               <Highlight>{HeaderData.greeting.middle}</Highlight>
               {HeaderData.greeting.end}
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl leading-10 md:leading-[4rem] lg:leading-[5rem] text-headerFg whitespace-nowrap font-semibold tracking-wide">
+            <h1
+              className={cn(
+                "text-4xl md:text-5xl lg:text-6xl leading-10 md:leading-[4rem] lg:leading-[5rem] text-headerFg whitespace-nowrap font-semibold tracking-wide",
+                baiJamjuree.className
+              )}
+            >
               {HeaderData.name}
             </h1>
-            <h3 className=" text-xl md:text-[1.75rem] lg:text-3xl text- mb-4 md:mb-2 bg-emerald-100 text-emerald-700 dark:bg-transparent dark:text-primary px-1 py-0.5 tracking-wide font-medium">
+            <h3
+              className={cn(
+                " text-xl md:text-[1.75rem] lg:text-3xl text- mb-4 md:mb-2 bg-emerald-100 text-emerald-700 dark:bg-transparent dark:text-primary px-1 py-0.5 tracking-wide font-medium",
+                baiJamjuree.className
+              )}
+            >
               {HeaderData.description}
             </h3>
             {/* <TextGenerateEffect
