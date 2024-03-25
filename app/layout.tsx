@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Karla } from "next/font/google";
 import "./globals.css";
 import Providers from "@/providers";
 import { Navbar } from "@/components/navbar";
@@ -11,9 +11,9 @@ import { Overlay } from "@/components/navbar/overlay";
 import Footer from "@/components/footer";
 import { Toaster } from "@/components/ui/sonner";
 
-const roboto = Roboto({
+const karla = Karla({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "700", "900"],
+  weight: ["300", "400", "500", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -33,7 +33,7 @@ export default function RootLayout({
         <body
           className={cn(
             "relative antialiased transition duration-100",
-            roboto.className
+            karla.className
           )}
           suppressHydrationWarning
         >
