@@ -11,27 +11,30 @@ const TicTacToe = () => {
 
   const [playerTurn, setPlayerTurn] = useState(false);
   const [squares, setSquares] = useState(() => {
-    const savedState = localStorage.getItem("ticTacToeState");
-    if (savedState) {
-      const {
-        squares: savedSquares,
-        player: savedPlayer,
-        playerTurn: savedPlayerTurn,
-      } = JSON.parse(savedState);
-      setGameStarted(true);
-      setPlayerTurn(savedPlayerTurn);
-      setPlayer(savedPlayer);
-      return savedSquares;
+    if (typeof window !== undefined) {
+      const savedState = localStorage.getItem("ticTacToeState");
+      if (savedState) {
+        const {
+          squares: savedSquares,
+          player: savedPlayer,
+          playerTurn: savedPlayerTurn,
+        } = JSON.parse(savedState);
+        setGameStarted(true);
+        setPlayerTurn(savedPlayerTurn);
+        setPlayer(savedPlayer);
+        return savedSquares;
+      }
     }
     return Array(9).fill(null);
   });
 
   useEffect(() => {
-    // Save game state to localStorage whenever it changes
-    localStorage.setItem(
-      "ticTacToeState",
-      JSON.stringify({ squares, player, playerTurn, winner })
-    );
+    if (typeof window !== undefined) {
+      localStorage.setItem(
+        "ticTacToeState",
+        JSON.stringify({ squares, player, playerTurn, winner })
+      );
+    }
   }, [squares, player, playerTurn, winner]);
 
   useEffect(() => {
