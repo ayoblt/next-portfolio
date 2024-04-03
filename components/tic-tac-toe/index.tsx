@@ -11,7 +11,7 @@ const TicTacToe = () => {
 
   const [playerTurn, setPlayerTurn] = useState(false);
   const [squares, setSquares] = useState(() => {
-    if (typeof window !== undefined) {
+    if (typeof window !== "undefined") {
       const savedState = localStorage.getItem("ticTacToeState");
       if (savedState) {
         const {
@@ -29,7 +29,7 @@ const TicTacToe = () => {
   });
 
   useEffect(() => {
-    if (typeof window !== undefined) {
+    if (typeof window !== "undefined") {
       localStorage.setItem(
         "ticTacToeState",
         JSON.stringify({ squares, player, playerTurn, winner })
