@@ -14,6 +14,8 @@ import { Spotlight } from "@/components/ui/spotlight";
 import Wrapper from "@/components/wrapper";
 import { HeaderData } from "@/data/home/header";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const Header = () => {
   return (
@@ -56,7 +58,7 @@ const Header = () => {
           </div>
           <div
             className={cn(
-              "mt-10 text-start text-xs md:text-small",
+              "mt-10 text-start text-xs md:text-sm",
               jetBrainsMono.className
             )}
           >
@@ -71,7 +73,15 @@ const Header = () => {
               <span className="text-accent">{HeaderData.github.const}</span>{" "}
               <span className="text-primary">{HeaderData.github.variable}</span>{" "}
               <span className="text-headerFg">{HeaderData.github.equal}</span>{" "}
-              <span className="text-secondary">{HeaderData.github.link}</span>
+              <Button
+                variant="link"
+                className="text-secondary text-xs md:text-sm"
+                asChild
+              >
+                <Link href={HeaderData.github.link}>
+                  {HeaderData.github.link}
+                </Link>
+              </Button>
             </div>
           </div>
         </div>

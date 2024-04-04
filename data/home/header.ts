@@ -6,12 +6,12 @@ export const HeaderData = {
   subText: "Crafting responsive websites where technologies meet creativity",
   commentCodes: [
     "// Challenge Accepted? Try Not to Get XOXed by My Skills!",
-    "// you can also see it on my Github pag",
+    "// you can also see it on my Github page",
   ],
   github: {
     const: "const",
     variable: "githubLink",
     equal: "=",
-    link: `“https://github.com/example/url”`,
+    link: `https://github.com/ayoblt/`,
   },
 };

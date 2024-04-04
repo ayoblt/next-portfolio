@@ -10,7 +10,9 @@ const TicTacToe = () => {
   const [winner, setWinner] = useState<string | null>(null);
 
   const [playerTurn, setPlayerTurn] = useState(false);
-  const [squares, setSquares] = useState(() => {
+  const [squares, setSquares] = useState(Array(9).fill(null));
+
+  useEffect(() => {
     if (typeof window !== "undefined") {
       const savedState = localStorage.getItem("ticTacToeState");
       if (savedState) {
@@ -18,15 +20,16 @@ const TicTacToe = () => {
           squares: savedSquares,
           player: savedPlayer,
           playerTurn: savedPlayerTurn,
+          winner: savedWinner,
         } = JSON.parse(savedState);
         setGameStarted(true);
         setPlayerTurn(savedPlayerTurn);
         setPlayer(savedPlayer);
-        return savedSquares;
+        setWinner(savedWinner);
+        setSquares(savedSquares);
       }
     }
-    return Array(9).fill(null);
-  });
+  }, []);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -126,7 +129,7 @@ const TicTacToe = () => {
           player && gameStarted && "invisible"
         )}
       />
-      <div className="absolute grid place-content-center inset-x-0 justify-center top-1/2 -translate-y-1/2 z-20 space-y-4">
+      <div className="absolute grid place-content-center place-items-center inset-x-0 justify-center top-1/2 -translate-y-1/2 z-20 space-y-4">
         {winner ? (
           <>
             <p className="font-semibold text-white text-lg">
@@ -136,7 +139,7 @@ const TicTacToe = () => {
                 ? "Draw"
                 : "Beat ya🤣😜! I won!!"}
             </p>
-            <p>You wanna go again?😜</p>
+            <p className="text-white">You wanna go again?😜</p>
             <Button variant="secondary" className="" onClick={handleWinner}>
               go again
             </Button>
