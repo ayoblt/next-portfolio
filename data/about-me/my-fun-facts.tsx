@@ -2,7 +2,7 @@ export const MyFunFactsData = {
   title: "my-fun-facts",
   facts: [
     "I'm Batman",
-    "I'm an artist. A good one!",
+    "I like to draw",
     "I have really great and terrible humour",
     // "I am still in school",
     "I enjoy solitude",
