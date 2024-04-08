@@ -2,21 +2,16 @@ export const AboutHeaderData = {
   path: "/about-me",
   pathDescription: "Who am i?",
   lines: [
-    `They call me the "Code Whisperer" on the streets. By day, I weave magic with pixels, crafting user-friendly websites that'll make your heart do a happy dance and leave even Wayne Enterprises jealous. Think of me as your digital sugar daddy, (but with better coding skills and less... sugar).`,
-    `But let's be honest, the city needs a protector at night too. So, when the keyboard sleeps, the hero awakens, you might find me out there facing off against criminals and other "whisperers"(though I'm more charming😊). Or like Bruce Wayne has his gadgets, I grab my trusty pencil and unleash it on paper with some good old-fashioned sketching. Sometimes, even some of the Da Vinci vibes find their way into my web designs!`,
-    // `That's not all though. To keep the creative spark burning, `,
-    `The tech world, like the city I protect, never sleeps. It races forward faster than a highway gala seller😂. That's why I'm constantly learning new frameworks and languages. No website is too complex, no code too cryptic – I can decipher it all (like a love letter, if you will).`,
-    `So, whether you need a website that's as user-friendly as the Batcave(modernized one) or one that visually stuns your visitors, I'm your guy. Consider me your web development Robin. Let's work together and make your online presence shine brighter than the Bat-Signal!🦇`,
+    `I'm Lateef, your friendly neighbourhood Web Developer. By day, I weave magic with pixels, crafting responsive websites tailored to your unique needs. Think of me as your digital sugar daddy (but with better coding skills and less...sugar😊), transforming online experiences with a sprinkle of code. Think of them as online experiences so smooth, they'd make your heart do a little happy dance.`,
+    `When the keyboard sleeps, the artist awakens! Don't worry, websites are still my jam. But to keep the creative spark glowing, I grab my trusty pencil and unleash it on paper. Random illustrations – my pencil can bring anything to life. Sometimes, even a sprinkle of Da Vinci vibes finds its way into my web designs (who knows, maybe that client needed a website that looked like the Mona Lisa's living room?)`,
+    `The tech world, like Lagos traffic, never sleeps. It moves faster than a rogue Danfo bus or a highway gala seller😂! That's why I'm constantly learning new frameworks and languages. No website is too complex, no code too cryptic – I can decipher it all (like a love letter, if you will).`,
+    `So, whether you need a website that's as user-friendly as intuitive or one that visually stuns your visitors, I'm your guy. Consider me your partner in crime(but the good kind). Let's build something amazing together!`,
   ],
 
   summary: [
     {
       label: "Day Job: ",
       text: "Web developer with a focus on user-friendly, delightful websites.",
-    },
-    {
-      label: "Night life: ",
-      text: "Crimefighter protecting the city (think a Lagos-based Batman).",
     },
     {
       label: "Creative Outlet: ",
